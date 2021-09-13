@@ -15,3 +15,7 @@ import (
 	"google.golang.org/api/option"
 	dialogflowpb "google.golang.org/genproto/googleapis/cloud/dialogflow/v2"
 )
+
+// DialogflowProcessor has all the information for connecting with Dialogflow
+type DialogflowProcessor struct {
+	projectID        string
