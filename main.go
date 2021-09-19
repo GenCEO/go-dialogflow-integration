@@ -23,3 +23,7 @@ type DialogflowProcessor struct {
 	lang             string
 	timeZone         string
 	sessionClient    *dialogflow.SessionsClient
+	ctx              context.Context
+}
+
+// NLPResponse is the struct for the response
