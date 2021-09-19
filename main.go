@@ -19,3 +19,7 @@ import (
 // DialogflowProcessor has all the information for connecting with Dialogflow
 type DialogflowProcessor struct {
 	projectID        string
+	authJSONFilePath string
+	lang             string
+	timeZone         string
+	sessionClient    *dialogflow.SessionsClient
