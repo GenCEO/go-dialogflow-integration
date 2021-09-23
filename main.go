@@ -27,3 +27,5 @@ type DialogflowProcessor struct {
 }
 
 // NLPResponse is the struct for the response
+type NLPResponse struct {
+	Intent     string            `json:"intent"`
