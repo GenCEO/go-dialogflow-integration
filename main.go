@@ -41,3 +41,5 @@ func main() {
 	fmt.Println("Started listening...")
 	http.ListenAndServe(":5000", nil)
 }
+
+func requestHandler(w http.ResponseWriter, r *http.Request) {
