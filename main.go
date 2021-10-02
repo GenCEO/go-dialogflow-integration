@@ -43,3 +43,6 @@ func main() {
 }
 
 func requestHandler(w http.ResponseWriter, r *http.Request) {
+	if r.Method == "POST" {
+		//POST method, receives a json to parse
+		body, err := ioutil.ReadAll(r.Body)
