@@ -46,3 +46,6 @@ func requestHandler(w http.ResponseWriter, r *http.Request) {
 	if r.Method == "POST" {
 		//POST method, receives a json to parse
 		body, err := ioutil.ReadAll(r.Body)
+		if err != nil {
+			http.Error(w, "Error reading request body",
+				http.StatusInternalServerError)
