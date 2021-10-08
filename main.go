@@ -53,3 +53,4 @@ func requestHandler(w http.ResponseWriter, r *http.Request) {
 		type inboundMessage struct {
 			Message string
 		}
+		var m inboundMessage
