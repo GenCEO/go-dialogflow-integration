@@ -49,3 +49,7 @@ func requestHandler(w http.ResponseWriter, r *http.Request) {
 		if err != nil {
 			http.Error(w, "Error reading request body",
 				http.StatusInternalServerError)
+		}
+		type inboundMessage struct {
+			Message string
+		}
