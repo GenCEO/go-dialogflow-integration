@@ -54,3 +54,7 @@ func requestHandler(w http.ResponseWriter, r *http.Request) {
 			Message string
 		}
 		var m inboundMessage
+		err = json.Unmarshal(body, &m)
+		if err != nil {
+			panic(err)
+		}
