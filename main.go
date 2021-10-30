@@ -63,3 +63,5 @@ func requestHandler(w http.ResponseWriter, r *http.Request) {
 		response := dp.processNLP(m.Message, "testUser")
 		fmt.Printf("%#v", response)
 		w.Header().Set("Content-Type", "application/json")
+		//json.NewEncoder(w).Encode(response)
+		json.NewEncoder(w).Encode(response)
