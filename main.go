@@ -62,3 +62,4 @@ func requestHandler(w http.ResponseWriter, r *http.Request) {
 		// Use NLP
 		response := dp.processNLP(m.Message, "testUser")
 		fmt.Printf("%#v", response)
+		w.Header().Set("Content-Type", "application/json")
