@@ -79,3 +79,5 @@ func (dp *DialogflowProcessor) init(a ...string) (err error) {
 	dp.ctx = context.Background()
 	sessionClient, err := dialogflow.NewSessionsClient(dp.ctx, option.WithCredentialsFile(dp.authJSONFilePath))
 	if err != nil {
+		log.Fatal("Error in auth with Dialogflow")
+	}
