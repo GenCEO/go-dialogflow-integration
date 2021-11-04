@@ -73,3 +73,9 @@ func (dp *DialogflowProcessor) init(a ...string) (err error) {
 	dp.authJSONFilePath = a[1]
 	dp.lang = a[2]
 	dp.timeZone = a[3]
+
+	// Auth process: https://dialogflow.com/docs/reference/v2-auth-setup
+
+	dp.ctx = context.Background()
+	sessionClient, err := dialogflow.NewSessionsClient(dp.ctx, option.WithCredentialsFile(dp.authJSONFilePath))
+	if err != nil {
