@@ -67,3 +67,9 @@ func requestHandler(w http.ResponseWriter, r *http.Request) {
 		json.NewEncoder(w).Encode(response)
 	}
 }
+
+func (dp *DialogflowProcessor) init(a ...string) (err error) {
+	dp.projectID = a[0]
+	dp.authJSONFilePath = a[1]
+	dp.lang = a[2]
+	dp.timeZone = a[3]
