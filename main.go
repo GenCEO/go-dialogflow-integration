@@ -66,3 +66,4 @@ func requestHandler(w http.ResponseWriter, r *http.Request) {
 		//json.NewEncoder(w).Encode(response)
 		json.NewEncoder(w).Encode(response)
 	}
+}
