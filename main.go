@@ -81,3 +81,7 @@ func (dp *DialogflowProcessor) init(a ...string) (err error) {
 	if err != nil {
 		log.Fatal("Error in auth with Dialogflow")
 	}
+	dp.sessionClient = sessionClient
+
+	return
+}
