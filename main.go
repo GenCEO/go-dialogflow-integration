@@ -85,3 +85,5 @@ func (dp *DialogflowProcessor) init(a ...string) (err error) {
 
 	return
 }
+
+func (dp *DialogflowProcessor) processNLP(rawMessage string, username string) (r NLPResponse) {
