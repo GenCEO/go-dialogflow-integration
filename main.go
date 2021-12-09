@@ -89,3 +89,6 @@ func (dp *DialogflowProcessor) init(a ...string) (err error) {
 func (dp *DialogflowProcessor) processNLP(rawMessage string, username string) (r NLPResponse) {
 	sessionID := username
 	request := dialogflowpb.DetectIntentRequest{
+		Session: fmt.Sprintf("projects/%s/agent/sessions/%s", dp.projectID, sessionID),
+		QueryInput: &dialogflowpb.QueryInput{
+			Input: &dialogflowpb.QueryInput_Text{
