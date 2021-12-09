@@ -87,3 +87,5 @@ func (dp *DialogflowProcessor) init(a ...string) (err error) {
 }
 
 func (dp *DialogflowProcessor) processNLP(rawMessage string, username string) (r NLPResponse) {
+	sessionID := username
+	request := dialogflowpb.DetectIntentRequest{
