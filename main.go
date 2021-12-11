@@ -92,3 +92,6 @@ func (dp *DialogflowProcessor) processNLP(rawMessage string, username string) (r
 		Session: fmt.Sprintf("projects/%s/agent/sessions/%s", dp.projectID, sessionID),
 		QueryInput: &dialogflowpb.QueryInput{
 			Input: &dialogflowpb.QueryInput_Text{
+				Text: &dialogflowpb.TextInput{
+					Text:         rawMessage,
+					LanguageCode: dp.lang,
