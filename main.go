@@ -95,3 +95,7 @@ func (dp *DialogflowProcessor) processNLP(rawMessage string, username string) (r
 				Text: &dialogflowpb.TextInput{
 					Text:         rawMessage,
 					LanguageCode: dp.lang,
+				},
+			},
+		},
+		QueryParams: &dialogflowpb.QueryParameters{
