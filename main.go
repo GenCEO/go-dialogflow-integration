@@ -99,3 +99,5 @@ func (dp *DialogflowProcessor) processNLP(rawMessage string, username string) (r
 			},
 		},
 		QueryParams: &dialogflowpb.QueryParameters{
+			TimeZone: dp.timeZone,
+		},
