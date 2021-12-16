@@ -107,3 +107,6 @@ func (dp *DialogflowProcessor) processNLP(rawMessage string, username string) (r
 		log.Fatalf("Error in communication with Dialogflow %s", err.Error())
 		return
 	}
+	queryResult := response.GetQueryResult()
+	if queryResult.Intent != nil {
+		r.Intent = queryResult.Intent.DisplayName
