@@ -101,3 +101,9 @@ func (dp *DialogflowProcessor) processNLP(rawMessage string, username string) (r
 		QueryParams: &dialogflowpb.QueryParameters{
 			TimeZone: dp.timeZone,
 		},
+	}
+	response, err := dp.sessionClient.DetectIntent(dp.ctx, &request)
+	if err != nil {
+		log.Fatalf("Error in communication with Dialogflow %s", err.Error())
+		return
+	}
