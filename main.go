@@ -110,3 +110,6 @@ func (dp *DialogflowProcessor) processNLP(rawMessage string, username string) (r
 	queryResult := response.GetQueryResult()
 	if queryResult.Intent != nil {
 		r.Intent = queryResult.Intent.DisplayName
+		r.Confidence = float32(queryResult.IntentDetectionConfidence)
+	}
+	r.Entities = make(map[string]string)
