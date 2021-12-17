@@ -113,3 +113,6 @@ func (dp *DialogflowProcessor) processNLP(rawMessage string, username string) (r
 		r.Confidence = float32(queryResult.IntentDetectionConfidence)
 	}
 	r.Entities = make(map[string]string)
+	params := queryResult.Parameters.GetFields()
+	if len(params) > 0 {
+		for paramName, p := range params {
