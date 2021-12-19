@@ -119,3 +119,4 @@ func (dp *DialogflowProcessor) processNLP(rawMessage string, username string) (r
 			fmt.Printf("Param %s: %s (%s)", paramName, p.GetStringValue(), p.String())
 			extractedValue := extractDialogflowEntities(p)
 			r.Entities[paramName] = extractedValue
+		}
