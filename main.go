@@ -126,3 +126,7 @@ func (dp *DialogflowProcessor) processNLP(rawMessage string, username string) (r
 
 func extractDialogflowEntities(p *structpb.Value) (extractedEntity string) {
 	kind := p.GetKind()
+	switch kind.(type) {
+	case *structpb.Value_StringValue:
+		return p.GetStringValue()
+	case *structpb.Value_NumberValue:
