@@ -123,3 +123,6 @@ func (dp *DialogflowProcessor) processNLP(rawMessage string, username string) (r
 	}
 	return
 }
+
+func extractDialogflowEntities(p *structpb.Value) (extractedEntity string) {
+	kind := p.GetKind()
