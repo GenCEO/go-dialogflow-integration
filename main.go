@@ -136,3 +136,6 @@ func extractDialogflowEntities(p *structpb.Value) (extractedEntity string) {
 	case *structpb.Value_StructValue:
 		s := p.GetStructValue()
 		fields := s.GetFields()
+		extractedEntity = ""
+		for key, value := range fields {
+			if key == "amount" {
