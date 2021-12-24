@@ -133,3 +133,6 @@ func extractDialogflowEntities(p *structpb.Value) (extractedEntity string) {
 		return strconv.FormatFloat(p.GetNumberValue(), 'f', 6, 64)
 	case *structpb.Value_BoolValue:
 		return strconv.FormatBool(p.GetBoolValue())
+	case *structpb.Value_StructValue:
+		s := p.GetStructValue()
+		fields := s.GetFields()
