@@ -139,3 +139,6 @@ func extractDialogflowEntities(p *structpb.Value) (extractedEntity string) {
 		extractedEntity = ""
 		for key, value := range fields {
 			if key == "amount" {
+				extractedEntity = fmt.Sprintf("%s%s", extractedEntity, strconv.FormatFloat(value.GetNumberValue(), 'f', 6, 64))
+			}
+			if key == "unit" {
