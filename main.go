@@ -142,3 +142,6 @@ func extractDialogflowEntities(p *structpb.Value) (extractedEntity string) {
 				extractedEntity = fmt.Sprintf("%s%s", extractedEntity, strconv.FormatFloat(value.GetNumberValue(), 'f', 6, 64))
 			}
 			if key == "unit" {
+				extractedEntity = fmt.Sprintf("%s%s", extractedEntity, value.GetStringValue())
+			}
+			if key == "date_time" {
