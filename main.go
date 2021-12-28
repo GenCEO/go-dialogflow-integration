@@ -150,3 +150,7 @@ func extractDialogflowEntities(p *structpb.Value) (extractedEntity string) {
 			// @TODO: Other entity types can be added here
 		}
 		return extractedEntity
+	case *structpb.Value_ListValue:
+		list := p.GetListValue()
+		if len(list.GetValues()) > 1 {
+			// @TODO: Extract more values
