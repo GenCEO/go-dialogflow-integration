@@ -158,3 +158,6 @@ func extractDialogflowEntities(p *structpb.Value) (extractedEntity string) {
 		extractedEntity = extractDialogflowEntities(list.GetValues()[0])
 		return extractedEntity
 	default:
+		return ""
+	}
+}
