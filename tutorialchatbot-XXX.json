@@ -6,4 +6,4 @@
   "client_email": "tutorialserviceaccount@XXX.iam.gserviceaccount.com",
   "client_id": "...",
   "auth_uri": "https://accounts.google.com/o/oauth2/auth",
-  "token_uri": "https://oauth2.googleapis.com/tok
+  "token_uri": "https://oauth2.googleapis.com/token",
