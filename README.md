@@ -1,1 +1,1 @@
-## Go Int
+## Go Integ
