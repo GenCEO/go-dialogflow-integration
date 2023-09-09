@@ -1,1 +1,1 @@
-## Go Integration with Di
+## Go Integration with Dialo
