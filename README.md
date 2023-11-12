@@ -1,2 +1,2 @@
 ## Go Integration with Dialogflow
-This repository contains th
+This repository contains the co
