@@ -1,2 +1,2 @@
 ## Go Integration with Dialogflow
-This repository contains the code for i
+This repository contains the code for integ
