@@ -1,2 +1,2 @@
 ## Go Integration with Dialogflow
-This repository contains the code for integrating Google's Di
+This repository contains the code for integrating Google's Dialog
