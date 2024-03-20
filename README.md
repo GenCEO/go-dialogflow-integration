@@ -1,2 +1,2 @@
 ## Go Integration with Dialogflow
-This repository contains the code for integrating Google's Dialogflow services with Go, initially put together as part of a medium tutorial by the former owner. For more information about the project, please contact the current own
+This repository contains the code for integrating Google's Dialogflow services with Go, initially put together as part of a medium tutorial by the former owner. For more information about the project, please contact the current owner
